@@ -51,6 +51,7 @@ public class LoginActivity extends AppCompatActivity {
 
         signUp = (TextView) findViewById(R.id.signUp);
         login = (TextView) findViewById(R.id.login);
+
         username = (EditText) findViewById(R.id.username);
         pass = (EditText) findViewById(R.id.pass);
         username2 = (EditText) findViewById(R.id.username2);
