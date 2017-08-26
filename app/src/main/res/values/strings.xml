@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Skill Tree</string>
+    <string name="main_skill_text">技能</string>
+    <string name="main_main_text">主页</string>
+    <string name="main_my_text">我的</string>
+
+    <array name="skill_tab">
+        <item>课程@dream@0</item>
+        <item>活动@dream@1</item>
+        <item>小组@dream@2</item>
+    </array>
+</resources>
