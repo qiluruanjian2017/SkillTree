@@ -33,7 +33,6 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, pass, username2, pass2, confirmPass;
     RelativeLayout relativeLayout, relativeLayout2;
     LinearLayout mainLinear;
-
     TextView signUp, login, forgetPass;
     ImageView logo, back;
     LinearLayout.LayoutParams params, params2;
