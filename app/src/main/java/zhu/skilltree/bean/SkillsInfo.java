@@ -8,6 +8,16 @@ import cn.bmob.v3.BmobObject;
 public class SkillsInfo extends BmobObject {
     private String skillName="";
     private String skillStatus="";
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    private String type="";
     public String getSkillStatus() {
         return skillStatus;
     }
