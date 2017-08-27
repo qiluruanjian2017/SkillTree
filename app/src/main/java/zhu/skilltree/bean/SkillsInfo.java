@@ -8,16 +8,18 @@ import cn.bmob.v3.BmobObject;
 public class SkillsInfo extends BmobObject {
     private String skillName="";
     private String skillStatus="";
+    //skillStatus : unselected 未选; selected 已选择但未完成; done 已完成;
+    private String skillType ="";
+    //skillType : "class" or "activity"
 
-    public String getType() {
-        return type;
+    public String getSkillType() {
+        return skillType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setSkillType(String skillType) {
+        this.skillType = skillType;
     }
 
-    private String type="";
     public String getSkillStatus() {
         return skillStatus;
     }
