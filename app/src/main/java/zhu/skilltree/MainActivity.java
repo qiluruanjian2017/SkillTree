@@ -47,22 +47,22 @@ public class MainActivity extends AppCompatActivity {
     private void initTabHost() {
         //实例化FragmentTabHost对象
         FragmentTabHost fragmentTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
-        fragmentTabHost.setup(this,getSupportFragmentManager(),android.R.id.tabcontent);
+        fragmentTabHost.setup(this, getSupportFragmentManager(), android.R.id.tabcontent);
 
         //去掉分割线
         fragmentTabHost.getTabWidget().setDividerDrawable(null);
 
-        for (int i = 0; i<mTableItemList.size(); i++) {
+        for (int i = 0; i < mTableItemList.size(); i++) {
             TabItem tabItem = mTableItemList.get(i);
             //实例化一个TabSpec,设置tab的名称和视图
             TabHost.TabSpec tabSpec = fragmentTabHost.newTabSpec(tabItem.getTitleString()).setIndicator(tabItem.getView());
-            fragmentTabHost.addTab(tabSpec,tabItem.getFragmentClass(),null);
+            fragmentTabHost.addTab(tabSpec, tabItem.getFragmentClass(), null);
 
             //给Tab按钮设置背景
             fragmentTabHost.getTabWidget().getChildAt(i).setBackgroundColor(getResources().getColor(R.color.main_bottom_bg));
 
             //默认选中第一个tab
-            if(i == 0) {
+            if (i == 0) {
                 tabItem.setChecked(true);
             }
         }
@@ -71,11 +71,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabChanged(String tabId) {
                 //重置Tab样式
-                for (int i = 0; i< mTableItemList.size(); i++) {
+                for (int i = 0; i < mTableItemList.size(); i++) {
                     TabItem tabitem = mTableItemList.get(i);
                     if (tabId.equals(tabitem.getTitleString())) {
                         tabitem.setChecked(true);
-                    }else {
+                    } else {
                         tabitem.setChecked(false);
                     }
                 }
@@ -100,16 +100,17 @@ public class MainActivity extends AppCompatActivity {
         public ImageView imageView;
         public TextView textView;
 
-        public TabItem(int imageNormal, int imagePress, int title,Class<? extends Fragment> fragmentClass) {
+        public TabItem(int imageNormal, int imagePress, int title, Class<? extends Fragment> fragmentClass) {
             this.imageNormal = imageNormal;
             this.imagePress = imagePress;
             this.title = title;
-            this.fragmentClass =fragmentClass;
+            this.fragmentClass = fragmentClass;
         }
 
-        public Class<? extends  Fragment> getFragmentClass() {
+        public Class<? extends Fragment> getFragmentClass() {
             return fragmentClass;
         }
+
         public int getImageNormal() {
             return imageNormal;
         }
@@ -119,25 +120,25 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public int getTitle() {
-            return  title;
+            return title;
         }
 
         public String getTitleString() {
             if (title == 0) {
                 return "";
             }
-            if(TextUtils.isEmpty(titleString)) {
+            if (TextUtils.isEmpty(titleString)) {
                 titleString = getString(title);
             }
             return titleString;
         }
 
         public View getView() {
-            if(this.view == null) {
+            if (this.view == null) {
                 this.view = getLayoutInflater().inflate(R.layout.view_tab_indicator, null);
                 this.imageView = (ImageView) this.view.findViewById(R.id.tab_iv_image);
                 this.textView = (TextView) this.view.findViewById(R.id.tab_tv_text);
-                if(this.title == 0) {
+                if (this.title == 0) {
                     this.textView.setVisibility(View.GONE);
                 } else {
                     this.textView.setVisibility(View.VISIBLE);
@@ -150,15 +151,15 @@ public class MainActivity extends AppCompatActivity {
 
         //切换tab的方法
         public void setChecked(boolean isChecked) {
-            if(imageView != null) {
-                if(isChecked) {
+            if (imageView != null) {
+                if (isChecked) {
                     imageView.setImageResource(imagePress);
-                }else {
+                } else {
                     imageView.setImageResource(imageNormal);
                 }
             }
-            if(textView != null && title != 0) {
-                if(isChecked) {
+            if (textView != null && title != 0) {
+                if (isChecked) {
                     textView.setTextColor(getResources().getColor(R.color.main_botton_text_select));
                 } else {
                     textView.setTextColor(getResources().getColor(R.color.main_bottom_text_normal));
