@@ -14,8 +14,9 @@ import cn.bmob.v3.Bmob;
 /**
  * Created by Zhu on 2017.7.23.
  */
-public class SplashActivity extends Activity{
+public class SplashActivity extends Activity {
     private Handler mHandler;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // 初始化 Bmob SDK
@@ -43,9 +44,11 @@ public class SplashActivity extends Activity{
             @Override
             public void onAnimationStart(Animation animation) {
             }
+
             @Override
             public void onAnimationRepeat(Animation animation) {
             }
+
             @Override
             public void onAnimationEnd(Animation animation) {
                 //当监听到动画结束时，开始跳转到MainActivity中去

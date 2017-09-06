@@ -344,7 +344,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private Boolean signUp() {
-        if(!pass2.getText().toString().equals(confirmPass.getText().toString())){
+        if (!pass2.getText().toString().equals(confirmPass.getText().toString())) {
             Snackbar.make(relativeLayout2, "两次密码输入不一致...", Snackbar.LENGTH_SHORT).show();
             return false;
         }
