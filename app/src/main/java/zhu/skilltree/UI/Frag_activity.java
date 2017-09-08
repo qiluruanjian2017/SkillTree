@@ -13,9 +13,14 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import zhu.skilltree.Adapter.MyActivityAdapter;
+import zhu.skilltree.Adapter.MyClassAdapter;
 import zhu.skilltree.R;
 import zhu.skilltree.bean.MyActivity;
+import zhu.skilltree.bean.MyClass;
 
 /**
  * Created by zd on 2017/7/19.
@@ -23,7 +28,6 @@ import zhu.skilltree.bean.MyActivity;
 
 public class Frag_activity extends Fragment{
     private RecyclerView recyclerView ;
-    private SearchView searchView;
 
     @Nullable
     @Override
@@ -32,24 +36,22 @@ public class Frag_activity extends Fragment{
         //初始化布局
         View v = inflater.inflate(R.layout.frag_classandactivity,container,false);
         recyclerView = (RecyclerView)v.findViewById(R.id.my_classAndActivity_list);
-        searchView = (SearchView)v.findViewById(R.id.my_classAndActivity_search);
-
-        //RecyclerView相关
-        MyActivityAdapter adapter = new MyActivityAdapter(load());//自定义Adapter
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(adapter);
-
+        load();
         return v;
     }
 
-    private List load(){
-        MyActivity myActivity;
-        List<MyActivity> mList = new ArrayList<>();
-        for(int i = 0;i<10;i++){
-            myActivity = new MyActivity("乒乓球"+i);
-            mList.add(myActivity);
-        }
-        return  mList;
+    private void load(){
+        BmobQuery<MyActivity> query = new BmobQuery<MyActivity>();
+        query.setLimit(10);
+        query.addWhereEqualTo("status","unselected");
+        query.findObjects(new FindListener<MyActivity>() {
+            @Override
+            public void done(List<MyActivity> list, BmobException e) {
+                MyActivityAdapter adapter = new MyActivityAdapter(list);//自定义Adapter
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                recyclerView.setAdapter(adapter);
+            }
+        });
     }
 
     private List search(String keyWords){

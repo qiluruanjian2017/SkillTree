@@ -3,18 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <android.support.v7.widget.SearchView
-        android:id="@+id/my_classAndActivity_search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:queryHint="搜索课程"
-        android:layout_margin="8dp"></android.support.v7.widget.SearchView>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#D3D3D3"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_classAndActivity_list"
         android:layout_width="match_parent"

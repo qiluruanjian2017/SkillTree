@@ -14,9 +14,4 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="严谨"/>
-    <TextView
-        android:id="@+id/my_class_credit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="学分:5"/>
 </LinearLayout>

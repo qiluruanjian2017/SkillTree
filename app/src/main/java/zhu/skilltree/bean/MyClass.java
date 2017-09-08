@@ -12,14 +12,11 @@ import cn.bmob.v3.BmobObject;
 public class MyClass extends BmobObject{
     private String name;//课程名
     private String teacher;//任课老师
-    private String credit;//学分
-    private String score;//成绩
-    private String level;//等级，取值abcd
+    private String status;//用于记录该课程的状态，未选择：unselected;选择了但还未完成：doing;已完成：done
 
-    public MyClass(String name, String teacher , String credit){
+    public MyClass(String name, String teacher){
         this.name = name;
         this.teacher = teacher;
-        this.credit = credit;
     }
 
     public String getName() {
@@ -36,29 +33,5 @@ public class MyClass extends BmobObject{
 
     public void setTeacher(String teacher) {
         this.teacher = teacher;
-    }
-
-    public String getCredit() {
-        return credit;
-    }
-
-    public void setCredit(String credit) {
-        this.credit = credit;
-    }
-
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
     }
 }

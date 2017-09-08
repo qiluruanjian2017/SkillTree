@@ -35,8 +35,6 @@ public class MyClassAdapter extends RecyclerView.Adapter {
             super(itemView);
             name = (TextView)itemView.findViewById(R.id.my_class_name);
             teacher = (TextView)itemView.findViewById(R.id.my_class_teacher);
-            credit = (TextView)itemView.findViewById(R.id.my_class_credit);
-
         }
     }
     @Override
@@ -57,7 +55,6 @@ public class MyClassAdapter extends RecyclerView.Adapter {
         MyClass myClass = mList.get(position);
         mholder.name.setText(myClass.getName());
         mholder.teacher.setText(myClass.getTeacher());
-        mholder.credit.setText(myClass.getCredit());
     }
 
     @Override

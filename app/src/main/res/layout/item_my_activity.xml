@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
     <TextView
         android:id="@+id/my_activity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="乒乓球"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/my_activity_organizer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="高等数学"
-        android:textSize="30sp"/>
-
-</LinearLayout>
+        android:layout_below="@id/my_activity_name"
+        android:text="张三"/>
+    <Button
+        android:id="@+id/my_activity_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="选择"/>
+</RelativeLayout>
