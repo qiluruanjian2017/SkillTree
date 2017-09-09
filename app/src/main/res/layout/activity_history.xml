@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="zhu.skilltree.UI.MyActivity.historyActivity">
+
+    <ListView
+        android:id="@+id/history_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/history_lin"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp" />
+
+    <LinearLayout
+        android:id="@+id/history_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/history_close"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_weight="0.11"
+            android:background="@android:color/transparent"
+            app:srcCompat="?attr/actionModeCloseDrawable" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:text="历史记录"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+</RelativeLayout>
