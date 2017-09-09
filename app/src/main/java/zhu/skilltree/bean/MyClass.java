@@ -9,14 +9,14 @@ import cn.bmob.v3.BmobObject;
  * E-mail:sevenddddddd@gmail.com
  */
 
-public class MyClass extends BmobObject{
+public class MyClass extends BmobObject {
     private String name;//课程名
     private String teacher;//任课老师
     private String credit;//学分
     private String score;//成绩
     private String level;//等级，取值abcd
 
-    public MyClass(String name, String teacher , String credit){
+    public MyClass(String name, String teacher, String credit) {
         this.name = name;
         this.teacher = teacher;
         this.credit = credit;

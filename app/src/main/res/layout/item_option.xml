@@ -14,22 +14,23 @@
             android:id="@+id/iv_option"
             android:layout_width="35dp"
             android:layout_height="35dp" />
+
         <TextView
             android:id="@+id/txt_option"
             android:layout_width="250dp"
             android:layout_height="35dp"
 
-            android:textColor="@color/text_dark"
             android:gravity="center_vertical|left"
+            android:textColor="@color/text_dark"
             android:textSize="20sp" />
+
         <TextView
             android:id="@+id/txt_arrow"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:gravity="center_vertical|right"
             android:textColor="@color/text_gray"
-            android:textSize="15sp"/>
-
+            android:textSize="15sp" />
 
 
     </LinearLayout>

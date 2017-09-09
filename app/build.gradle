@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    buildToolsVersion '25.0.2'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId "zhu.skilltree"
@@ -42,4 +42,13 @@ dependencies {
     compile 'cn.bmob.android:http-legacy:1.0'
     compile 'cn.bmob.android:bmob-sdk:3.5.0'
     compile files('libs/jsoup-1.10.2.jar')
+    //TODO 集成：1.2、配置IM SDK（bmob-im）版本和Data SDK（bmob-sdk）版本：特定版本的bmob-im依赖特定版本的bmob-sdk
+    compile 'cn.bmob.android:bmob-im:2.0.9@aar'
+    compile 'cn.bmob.android:bmob-sdk:3.5.6'
+    compile 'com.android.support:appcompat-v7:25.3.0'
+    compile 'com.android.support:design:25.3.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.android.support:recyclerview-v7:25.3.0'
 }

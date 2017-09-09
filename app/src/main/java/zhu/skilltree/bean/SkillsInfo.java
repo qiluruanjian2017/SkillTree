@@ -6,10 +6,10 @@ import cn.bmob.v3.BmobObject;
  * Created by Zhu on 2017.7.23.
  */
 public class SkillsInfo extends BmobObject {
-    private String skillName="";
-    private String skillStatus="";
+    private String skillName = "";
+    private String skillStatus = "";
     //skillStatus : unselected 未选; selected 已选择但未完成; done 已完成;
-    private String skillType ="";
+    private String skillType = "";
     //skillType : "class" or "activity"
 
     public String getSkillType() {

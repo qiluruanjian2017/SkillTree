@@ -1,28 +1,26 @@
 package zhu.skilltree.bean;
 
-import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.datatype.BmobRelation;
 
 /**
  * Created by Zhu on 2017.7.23.
  */
-public class UserInfo extends BmobObject {
+public class UserInfo extends BmobUser {
     private String studentId = "";//学号
     private String schoolName = "";//学校名称
     private String officePassword = "";//教务处密码
     private String name = "";//姓名
     private BmobRelation hasSkills;
+    public BmobRelation group;
 
-    public BmobUser getBaseInfo() {
-        return baseInfo;
+    public void setGroup(BmobRelation group) {
+        this.group = group;
     }
 
-    public void setBaseInfo(BmobUser baseInfo) {
-        this.baseInfo = baseInfo;
+    public BmobRelation getGroup() {
+        return group;
     }
-
-    private BmobUser baseInfo;
 
     public String getSchoolName() {
         return schoolName;

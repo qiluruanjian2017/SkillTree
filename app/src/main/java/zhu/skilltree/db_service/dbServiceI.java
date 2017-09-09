@@ -7,7 +7,10 @@ import cn.bmob.v3.BmobObject;
  */
 public interface dbServiceI {
     Boolean save(BmobObject bmobObject);
-    Boolean update(BmobObject bmobObject,String property,String newValue);
+
+    Boolean update(BmobObject bmobObject, String property, String newValue);
+
     Boolean delete(BmobObject bmobObject);
-    void  setFlag(Boolean b);
+
+    void setFlag(Boolean b);
 }

@@ -10,7 +10,6 @@ import java.util.List;
 
 import zhu.skilltree.R;
 import zhu.skilltree.bean.MyActivity;
-import zhu.skilltree.bean.MyClass;
 
 /**
  * This is SkillTree
@@ -22,21 +21,22 @@ import zhu.skilltree.bean.MyClass;
 public class MyActivityAdapter extends RecyclerView.Adapter {
     List<MyActivity> mList;
 
-    public MyActivityAdapter(List list){
+    public MyActivityAdapter(List list) {
         super();
         mList = list;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            name = (TextView)itemView.findViewById(R.id.my_activity_name);
+            name = (TextView) itemView.findViewById(R.id.my_activity_name);
 
         }
     }
+
     @Override
     public long getItemId(int position) {
         return super.getItemId(position);
@@ -44,14 +44,14 @@ public class MyActivityAdapter extends RecyclerView.Adapter {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_activity,null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_activity, null);
         ViewHolder holder = new ViewHolder(v);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ViewHolder mholder = (ViewHolder)holder;
+        ViewHolder mholder = (ViewHolder) holder;
         MyActivity myActivity = mList.get(position);
         mholder.name.setText(myActivity.getName());
     }

@@ -9,9 +9,9 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
-import zhu.skilltree.UI.Frag_activity;
-import zhu.skilltree.UI.Frag_class;
-import zhu.skilltree.UI.Frag_group;
+import zhu.skilltree.UI.MyFragment.Frag_activity;
+import zhu.skilltree.UI.MyFragment.Frag_class;
+import zhu.skilltree.UI.MyFragment.Frag_group;
 
 /**
  * Created by janiszhang on 2016/6/10.
@@ -34,21 +34,21 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
     @Override
     public android.support.v4.app.Fragment getItem(int position) {
         //初始化Fragment数据
-        switch (position){
+        switch (position) {
             case 0:
-                if(myClass == null){
+                if (myClass == null) {
                     return new Frag_class();
                 } else {
                     return myClass;
                 }
             case 1:
-                if(myActivity == null){
+                if (myActivity == null) {
                     return new Frag_activity();
                 } else {
                     return myActivity;
                 }
             case 2:
-                if(myGroup == null){
+                if (myGroup == null) {
                     return new Frag_group();
                 } else {
                     return myGroup;

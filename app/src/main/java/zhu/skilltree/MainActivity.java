@@ -13,20 +13,28 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import zhu.skilltree.UI.Frag_Main;
-import zhu.skilltree.UI.Frag_Skill;
+import zhu.skilltree.UI.MyFragment.Frag_Main;
 import zhu.skilltree.UI.MyFragment.Frag_My;
+import zhu.skilltree.UI.MyFragment.Frag_Skill;
 
 public class MainActivity extends AppCompatActivity {
 
     private List<TabItem> mTableItemList;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            Window window = getWindow();
+//
+//            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setNavigationBarColor(Color.TRANSPARENT);
+//
+//        }
         setContentView(R.layout.activity_main);
         initTabData();
         initTabHost();
@@ -37,9 +45,9 @@ public class MainActivity extends AppCompatActivity {
     private void initTabData() {
         mTableItemList = new ArrayList<>();
         //添加tab
-        mTableItemList.add(new TabItem(R.drawable.main_bottom_home_normal,R.drawable.main_bottom_home_press,R.string.main_skill_text, Frag_Skill.class));
-        mTableItemList.add(new TabItem(R.drawable.main_bottom_attention_normal,R.drawable.main_bottom_attention_press,R.string.main_main_text, Frag_Main.class));
-        mTableItemList.add(new TabItem(R.drawable.main_bottom_mine_normal,R.drawable.main_bottom_mine_press,R.string.main_my_text, Frag_My.class));
+        mTableItemList.add(new TabItem(R.drawable.main_bottom_home_normal, R.drawable.main_bottom_home_press, R.string.main_skill_text, Frag_Skill.class));
+        mTableItemList.add(new TabItem(R.drawable.main_bottom_attention_normal, R.drawable.main_bottom_attention_press, R.string.main_main_text, Frag_Main.class));
+        mTableItemList.add(new TabItem(R.drawable.main_bottom_mine_normal, R.drawable.main_bottom_mine_press, R.string.main_my_text, Frag_My.class));
     }
 
 

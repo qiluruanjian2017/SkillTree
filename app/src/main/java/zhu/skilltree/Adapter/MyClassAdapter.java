@@ -21,24 +21,25 @@ import zhu.skilltree.bean.MyClass;
 public class MyClassAdapter extends RecyclerView.Adapter {
     List<MyClass> mList;
 
-    public MyClassAdapter(List list){
+    public MyClassAdapter(List list) {
         super();
         mList = list;
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder{
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         TextView teacher;
         TextView credit;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            name = (TextView)itemView.findViewById(R.id.my_class_name);
-            teacher = (TextView)itemView.findViewById(R.id.my_class_teacher);
-            credit = (TextView)itemView.findViewById(R.id.my_class_credit);
+            name = (TextView) itemView.findViewById(R.id.my_class_name);
+            teacher = (TextView) itemView.findViewById(R.id.my_class_teacher);
+            credit = (TextView) itemView.findViewById(R.id.my_class_credit);
 
         }
     }
+
     @Override
     public long getItemId(int position) {
         return super.getItemId(position);
@@ -46,14 +47,14 @@ public class MyClassAdapter extends RecyclerView.Adapter {
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_class,null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_my_class, null);
         ViewHolder holder = new ViewHolder(v);
         return holder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        ViewHolder mholder = (ViewHolder)holder;
+        ViewHolder mholder = (ViewHolder) holder;
         MyClass myClass = mList.get(position);
         mholder.name.setText(myClass.getName());
         mholder.teacher.setText(myClass.getTeacher());
