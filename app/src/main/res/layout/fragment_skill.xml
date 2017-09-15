@@ -10,11 +10,11 @@
         android:id="@+id/tab_essence"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/essence_tab_bg"
-        app:tabIndicatorColor="@color/essence_tab_text_color_press"
+        android:background="#E6E6FA"
+        app:tabIndicatorColor="@color/bg_green"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/essence_tab_text_color_press"
-        app:tabTextColor="@color/essence_tab_text_color_normal" />
+        app:tabSelectedTextColor="@color/bg_green"
+        app:tabTextColor="@color/text_gray" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_essence"

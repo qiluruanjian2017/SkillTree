@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/bg_top_bar</item>
         <item name="colorPrimaryDark">@color/bg_green</item>
-        <item name="windowNoTitle">true</item>
+        <item name="windowNoTitle">false</item>
 
     </style>
 

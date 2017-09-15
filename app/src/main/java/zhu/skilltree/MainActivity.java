@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentTabHost.addTab(tabSpec, tabItem.getFragmentClass(), null);
 
             //给Tab按钮设置背景
-            fragmentTabHost.getTabWidget().getChildAt(i).setBackgroundColor(getResources().getColor(R.color.main_bottom_bg));
+            fragmentTabHost.getTabWidget().getChildAt(i).setBackgroundColor(getResources().getColor(R.color.test));
 
             //默认选中第一个tab
             if (i == 0) {
@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (textView != null && title != 0) {
                 if (isChecked) {
-                    textView.setTextColor(getResources().getColor(R.color.main_botton_text_select));
+                    textView.setTextColor(getResources().getColor(R.color.bg_top_bar));
                 } else {
                     textView.setTextColor(getResources().getColor(R.color.main_bottom_text_normal));
                 }

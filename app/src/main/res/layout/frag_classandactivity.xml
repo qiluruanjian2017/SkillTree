@@ -9,12 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:queryHint="搜索课程"></android.support.v7.widget.SearchView>
+        android:iconifiedByDefault="false"
+        android:queryHint="搜索"></android.support.v7.widget.SearchView>
+
+
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#D3D3D3" />
+        android:layout_height="1dp"
+        android:background="@color/text_gray"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_classAndActivity_list"

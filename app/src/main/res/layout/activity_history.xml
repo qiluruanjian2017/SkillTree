@@ -19,6 +19,7 @@
         android:id="@+id/history_lin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/bg_top_bar"
         android:orientation="horizontal">
 
         <ImageButton
@@ -35,6 +36,7 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:text="历史记录"
+            android:paddingTop="10dp"
             android:textSize="25dp" />
     </LinearLayout>
 

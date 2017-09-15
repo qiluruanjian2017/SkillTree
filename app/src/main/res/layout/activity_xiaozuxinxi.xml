@@ -20,7 +20,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-
+            android:background="@color/bg_top_bar"
             android:layout_height="42dp"
             android:orientation="horizontal"
             android:weightSum="1">

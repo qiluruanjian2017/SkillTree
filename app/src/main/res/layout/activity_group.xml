@@ -51,7 +51,7 @@
             android:id="@+id/group_lin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/bg_top_bar"
             android:orientation="horizontal"
             android:weightSum="1">
 
