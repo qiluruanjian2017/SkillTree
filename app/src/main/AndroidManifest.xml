@@ -64,12 +64,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UI.MyActivity.chuangjianActivity"
-            android:label="创建小组"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:label="创建小组" />
         <activity
             android:name=".UI.MyActivity.wodeActivity"
-            android:label="我的小组"
-            android:theme="@style/Theme.AppCompat.Light" />
+            android:label="我的小组"/>
+
         <activity android:name=".UI.MyActivity.xiaozuActivity" />
         <activity
             android:name=".UI.MyActivity.xiaozuxinxi"
