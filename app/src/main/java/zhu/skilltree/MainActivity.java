@@ -168,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if (textView != null && title != 0) {
                 if (isChecked) {
-                    textView.setTextColor(getResources().getColor(R.color.bg_top_bar));
+                    textView.setTextColor(getResources().getColor(R.color.main_bottom_text_normal));
                 } else {
                     textView.setTextColor(getResources().getColor(R.color.main_bottom_text_normal));
                 }
