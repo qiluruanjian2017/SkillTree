@@ -1,4 +1,4 @@
-package zhu.skilltree.UI.MyFragment;
+package zhu.skilltree.UI;
 
 /**
  * Created by zd on 2017/7/19.
@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,17 +35,15 @@ import zhu.skilltree.bean.MyClass;
 public class Frag_class extends Fragment {
     private static final String TAG = "Frag_class";
 
-    private RecyclerView recyclerView;
-    private SearchView searchView;
+    private RecyclerView recyclerView ;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         //初始化布局
-        View v = inflater.inflate(R.layout.frag_classandactivity, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.my_classAndActivity_list);
-        searchView = (SearchView) v.findViewById(R.id.my_classAndActivity_search);
+        View v = inflater.inflate(R.layout.frag_classandactivity,container,false);
+        recyclerView = (RecyclerView)v.findViewById(R.id.my_classAndActivity_list);
 
         //RecyclerView相关
 //        MyClassAdapter adapter = new MyClassAdapter(load());//自定义Adapter
@@ -55,35 +54,35 @@ public class Frag_class extends Fragment {
         return v;
 
     }
+//    private void uploadItems(){
+//        Log.d(TAG, "uploadItems: ");
+//        MyClass c1,c2,c3,c4,c5;
+//        c1 = new MyClass("高等数学","严谨");
+//        c2 = new MyClass("java程序设计教程","卢旭东");
+//        c3 = new MyClass("数据库","哈哈哈");
+//        c4 = new MyClass("数据结构","嘿嘿嘿");
+//        c5 = new MyClass("离散数学","略略略");
+//        SaveListener<String> listener = new SaveListener<String>() {
+//            @Override
+//            public void done(String s, BmobException e) {
+//                if(e == null){
+//                    Log.d(TAG, "done: succeed:"+s);
+//                } else
+//                Log.d(TAG, "done: "+e.getMessage());
+//            }
+//        };
+//        c1.save(listener);
+//        c2.save(listener);
+//        c3.save(listener);
+//        c4.save(listener);
+//        c5.save(listener);
+//    }
 
-    private void uploadItems() {
-        Log.d(TAG, "uploadItems: ");
-        MyClass c1, c2, c3, c4, c5;
-        c1 = new MyClass("高等数学", "严谨", "3");
-        c2 = new MyClass("java程序设计教程", "卢旭东", "2");
-        c3 = new MyClass("数据库", "哈哈哈", "6");
-        c4 = new MyClass("数据结构", "嘿嘿嘿", "1");
-        c5 = new MyClass("离散数学", "略略略", "3");
-        SaveListener<String> listener = new SaveListener<String>() {
-            @Override
-            public void done(String s, BmobException e) {
-                if (e == null) {
-                    Log.d(TAG, "done: succeed:" + s);
-                } else
-                    Log.d(TAG, "done: " + e.getMessage());
-            }
-        };
-        c1.save(listener);
-        c2.save(listener);
-        c3.save(listener);
-        c4.save(listener);
-        c5.save(listener);
-    }
-
-    private void load() {
+    private void load(){
 
         BmobQuery<MyClass> query = new BmobQuery<MyClass>();
         query.setLimit(10);
+        query.addWhereEqualTo("status","unselected");
         query.findObjects(new FindListener<MyClass>() {
             @Override
             public void done(List<MyClass> list, BmobException e) {
@@ -102,10 +101,10 @@ public class Frag_class extends Fragment {
 //        return  mList;
     }
 
-    private List search(String keyWords) {
-        List<MyClass> mList = new ArrayList<>();
-
-        return mList;
-    }
+//    private List search(String keyWords){
+//        List<MyClass> mList = new ArrayList<>();
+//
+//        return mList;
+//    }
 
 }

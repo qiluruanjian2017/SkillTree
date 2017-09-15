@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import java.util.List;
 
+import zhu.skilltree.UI.Frag_class;
 import zhu.skilltree.UI.MyFragment.Frag_activity;
-import zhu.skilltree.UI.MyFragment.Frag_class;
 import zhu.skilltree.UI.MyFragment.Frag_group;
 
 /**

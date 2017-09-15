@@ -51,4 +51,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.google.android.gms:play-services-appindexing:8.4.0'
     compile 'com.android.support:recyclerview-v7:25.3.0'
+
+    compile 'com.mylhyl:superDialog:1.0.11'
 }
